@@ -1,68 +1,130 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">codificando.ml</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <main class="">
+    <div class="bg-gray-900 px-5 py-3 h-32">
+      <div
+        :class="{ 'css-typing': typeEffectClass, hidden: !typeEffectClass }"
+        class="text-gray-500 bg-white p-3"
+      >
+        <h1>
+          Hola
+          <strong class="text-2xl">👋🏻️</strong>
+          mi nombre es Víctor Israel
+        </h1>
+        <h1>
+          y soy desarrollador full stack
+          <strong class="text-2xl">🤓️</strong>
+        </h1>
       </div>
     </div>
-  </div>
+    <div class="m-5 p-2 shadow-md text-gray-500">
+      <h2 class="text-justify">
+        "Codificando" es un blog dedicado a compartir con todo el mundo pero en
+        especial a la comunidad Geek informacion acerca de tecnolgia enfocado en
+        Laravel y Vue Js.
+      </h2>
+    </div>
+    <div class="m-5">
+      <h2 class="text-5xl mb-4">Artículos ✍️</h2>
+      <view-article v-for="(blog, key) in blogs" :key="key" :blog="blog" />
+    </div>
+  </main>
 </template>
 
 <script>
-export default {}
+import ViewArticle from '~/components/Article.vue'
+import Blogs from '~/blogs'
+
+export default {
+  components: {
+    ViewArticle,
+  },
+  data: () => ({
+    typeEffectClass: false,
+  }),
+  computed: {
+    blogs() {
+      return Blogs
+    },
+  },
+  mounted() {
+    this.typeEffectClass = true
+  },
+}
 </script>
 
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
+<style scoped>
+.css-typing h1 {
+  border-right: 0.15em solid #111827;
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: 500;
 }
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+.css-typing h1:nth-child(1) {
+  width: 15.5em;
+  animation: type 1.5s steps(40, end);
+  animation-fill-mode: forwards;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.css-typing h1:nth-child(8) {
+  width: 7em;
+  opacity: 0;
+  animation: type2 1.8s steps(40, end);
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
 }
 
-.links {
-  padding-top: 15px;
+.css-typing h1:nth-child(2) {
+  width: 13.7em;
+  opacity: 0;
+  animation: type3 1.5s steps(60, end), blink 0.5s step-end infinite alternate;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: 0.15em solid #111827;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: 0.15em solid #111827;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 </style>
