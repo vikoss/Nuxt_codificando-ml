@@ -8,7 +8,7 @@
     <div>
       <figure>
         <img
-          src="~/assets/blogs/crear-bot-telegram/telegram.jpg"
+          src="~/assets/articles/crear-bot-telegram/telegram.jpg"
           :alt="blog.title"
           class="w-full"
         />
@@ -99,7 +99,7 @@
         nada te lo presento:
       </p>
       <img
-        src="~/assets/blogs/crear-bot-telegram/bot-father.png"
+        src="~/assets/articles/crear-bot-telegram/bot-father.png"
         alt="El BotFather"
         class="my-8 w-full"
       />
@@ -117,7 +117,7 @@
         para ir directo
       </p>
       <img
-        src="~/assets/blogs/crear-bot-telegram/chat-found-bot-father.png"
+        src="~/assets/articles/crear-bot-telegram/chat-found-bot-father.png"
         alt="El BotFather"
         class="my-8 w-full"
       />
@@ -128,28 +128,28 @@
         inmedianto nos contestara poniendose a nuestra disposicion
       </p>
       <img
-        src="~/assets/blogs/crear-bot-telegram/chat-start-bot-father.png"
+        src="~/assets/articles/crear-bot-telegram/chat-start-bot-father.png"
         alt="El BotFather"
         class="my-8 w-full"
       />
       ahora le diremos que necesitamos crear un nuevo bot
       <code class="bg-gray-700 text-gray-200 py-px px-1">/newbot</code>
       <img
-        src="~/assets/blogs/crear-bot-telegram/chat-new-bot-bot-father.png"
+        src="~/assets/articles/crear-bot-telegram/chat-new-bot-bot-father.png"
         alt="El BotFather"
         class="my-8 w-full"
       />
       bien ahora nos pide que eligamos un nombre de usuario para nuestro bot y
       que debe terminar en `bot` por ejemplo: CodificandoBot o codificando_bot.
       <img
-        src="~/assets/blogs/crear-bot-telegram/chat-new-bot-bot-father.png"
+        src="~/assets/articles/crear-bot-telegram/chat-new-bot-bot-father.png"
         alt="El BotFather"
         class="my-8 w-full"
       />
       en cuanto te decidas por tu nombre de usuario para tu bot hacelo saber a
       BotFather
       <img
-        src="~/assets/blogs/crear-bot-telegram/chat-done-bot-father.png"
+        src="~/assets/articles/crear-bot-telegram/chat-done-bot-father.png"
         alt="El BotFather"
         class="my-8 w-full"
       />
@@ -194,7 +194,7 @@
         nuestro grupo en este caso sera Codificando Group
       </p>
       <img
-        src="~/assets/blogs/crear-bot-telegram/new-group.png"
+        src="~/assets/articles/crear-bot-telegram/new-group.png"
         alt="Chat con BotFather, felicidades tu bot ah sido creado."
         class="my-8 w-full"
       />
@@ -204,21 +204,21 @@
       este enviando esos logs Damos en agregar miembros y buscamos a nuestro bot
       por ejemplo @CodificandoBot
       <img
-        src="~/assets/blogs/crear-bot-telegram/add-members.png"
+        src="~/assets/articles/crear-bot-telegram/add-members.png"
         alt="Chat con BotFather, felicidades tu bot ah sido creado."
         class="my-8 w-full"
       />
       Por el momento solo estaran tu y el bot en el grupo entonces le damos en
       agregar.
       <img
-        src="~/assets/blogs/crear-bot-telegram/added-bot-to-group.png"
+        src="~/assets/articles/crear-bot-telegram/added-bot-to-group.png"
         alt="Chat con BotFather, felicidades tu bot ah sido creado."
         class="my-8 w-full"
       />
       Nos dirigimos al grupo y enviamos nuestro primer mensaje esto con el fin
       de que lleguen actualizaciones a la API de telegram
       <img
-        src="~/assets/blogs/crear-bot-telegram/first-message-to-group.png"
+        src="~/assets/articles/crear-bot-telegram/first-message-to-group.png"
         alt="Chat con BotFather, felicidades tu bot ah sido creado."
         class="my-8 w-full"
       />
@@ -251,13 +251,13 @@
         <i class="text-gray-700">authorization token</i>
       </p>
       <img
-        src="~/assets/blogs/crear-bot-telegram/postman-get-updates.png"
+        src="~/assets/articles/crear-bot-telegram/postman-get-updates.png"
         alt="Chat con BotFather, felicidades tu bot ah sido creado."
         class="my-8 w-full"
       />
       <p>La respuesta sera en formato JSON asi como la siguiente:</p>
       <img
-        src="~/assets/blogs/crear-bot-telegram/result-get-updates.png"
+        src="~/assets/articles/crear-bot-telegram/result-get-updates.png"
         alt="Chat con BotFather, felicidades tu bot ah sido creado."
         class="my-8 w-full"
       />
@@ -277,7 +277,7 @@
       </p>
       <p>recuerda cambiar el chat_id por el tuyo</p>
       <img
-        src="~/assets/blogs/crear-bot-telegram/send-message-from-postman.png"
+        src="~/assets/articles/crear-bot-telegram/send-message-from-postman.png"
         alt="Chat con BotFather, felicidades tu bot ah sido creado."
         class="my-8 w-full"
       />
@@ -286,7 +286,7 @@
         entonces tendras tu primer mensaje de nuestro bot
       </p>
       <img
-        src="~/assets/blogs/crear-bot-telegram/first-message-bot-from-postman.png"
+        src="~/assets/articles/crear-bot-telegram/first-message-bot-from-postman.png"
         alt="Chat con BotFather, felicidades tu bot ah sido creado."
         class="my-8 w-full"
       />
@@ -352,7 +352,7 @@
         controlador de Laravel
       </p>
       <img
-        src="~/assets/blogs/crear-bot-telegram/controller.png"
+        src="~/assets/articles/crear-bot-telegram/controller.png"
         alt="Chat con BotFather, felicidades tu bot ah sido creado."
         class="my-8 w-full"
       />
@@ -364,7 +364,7 @@
       </p>
 
       <img
-        src="~/assets/blogs/crear-bot-telegram/first-message-from-laravel.png"
+        src="~/assets/articles/crear-bot-telegram/first-message-from-laravel.png"
         alt="Chat con BotFather, felicidades tu bot ah sido creado."
         class="my-8 w-full"
       />
@@ -383,7 +383,7 @@
 <script>
 import Subtitle from '~/components/Typography/Subtitle.vue'
 import Paragraph from '~/components/Typography/Paragraph.vue'
-import Blogs from '~/blogs'
+import Blogs from '~/articles'
 
 export default {
   components: {

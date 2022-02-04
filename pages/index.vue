@@ -32,7 +32,7 @@
 
 <script>
 import ViewArticle from '~/components/Article.vue'
-import Blogs from '~/blogs'
+import Blogs from '~/articles'
 
 export default {
   components: {
