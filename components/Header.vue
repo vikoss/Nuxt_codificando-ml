@@ -1,28 +1,22 @@
 <template>
-  <header class="flex justify-between items-center bg-gray-900 pt-2 px-2">
-    <section class="">
+  <header class="flex justify-between items-center bg-slate pt-2 px-2">
+    <section>
       <nuxt-link class="flex justify-center items-center" to="/">
         <figure>
           <img
-            class="h-10 w-auto bg-white"
-            src="~/assets/terminal_x128.png"
-            alt="Logo del blog CODIFICANDO"
+            class="h-16 w-auto"
+            src="~/assets/logos/vikoss-transparent.png"
+            alt="Logo"
           />
         </figure>
-        <p
-          class="text-white font-semibold text-lg"
-          style="font-family: Comic Sans MS, Comic Sans, cursive"
-        >
-          Codificando
-        </p>
       </nuxt-link>
     </section>
-    <section class="">
-      <div class="menu-hamburger">
+    <section>
+      <div class="menu-hamburger relative z-20">
         <button
+          id="button-hamburger-animation"
           class="border-0 cursor-pointer p-0 w-14 h-14"
-          :class="{ open: classOpen }"
-          @click="classOpen = !classOpen"
+          @click="openMenu"
         >
           <span
             class="top-line rounded bg-white block w-3/5 my-1.5 mx-auto h-0.5"
@@ -57,17 +51,27 @@
         </button>
       </div>
       <transition name="fade">
-        <nav
+        <div
           v-show="classOpen"
-          class="absolute right-0 p-2 bg-gray-600 text-white sm:hidden"
+          class="
+            bg-slate
+            text-white text-3xl
+            absolute
+            inset-0
+            max-w-3xl
+            mx-auto
+            z-10
+          "
         >
-          <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="home.html">Articulos</a></li>
-            <li><a href="home.html">Contacto</a></li>
-            <li><a href="home.html">Acerca de mi</a></li>
-          </ul>
-        </nav>
+          <nav>
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="home.html">Articulos</a></li>
+              <li><a href="home.html">Contacto</a></li>
+              <li><a href="home.html">Acerca de mi</a></li>
+            </ul>
+          </nav>
+        </div>
       </transition>
     </section>
   </header>
@@ -78,6 +82,17 @@ export default {
   data: () => ({
     classOpen: false,
   }),
+  methods: {
+    openMenu() {
+      const button = document.getElementById('button-hamburger-animation')
+      if (this.classOpen) {
+        button.classList.toggle('close')
+      } else {
+        button.classList.toggle('open')
+      }
+      this.classOpen = !this.classOpen
+    },
+  },
 }
 </script>
 
@@ -103,15 +118,15 @@ export default {
   animation-name: bottom-line-animation;
 }
 
-.menu-hamburger button .top-line {
+.menu-hamburger button.close .top-line {
   animation-name: top-line-animation-close;
 }
 
-.menu-hamburger button .middle-line {
+.menu-hamburger button.close .middle-line {
   animation-name: middle-line-animation-close;
 }
 
-.menu-hamburger button .bottom-line {
+.menu-hamburger button.close .bottom-line {
   animation-name: bottom-line-animation-close;
 }
 

@@ -3,24 +3,20 @@
     <figure>
       <img :src="blog.image" :alt="blog.title" />
     </figure>
-    <subtitle class="my-1" :label="blog.title" />
-    <paragraph :label="blog.description" />
-    <nuxt-link :to="`/articulos/${blog.name}`">
-      <button-read-more class="mt-3" text="Continua leyendo" />
+    <h2 class="text-2xl">{{ blog.title }}</h2>
+    <p class="text-gray-500 text-sm">{{ blog.description }}</p>
+    <nuxt-link :to="`/articulos/${blog.slug}`">
+      <button-base class="mt-3" label="Continuar leyendo" />
     </nuxt-link>
   </div>
 </template>
 
 <script>
-import Subtitle from '~/components/Typography/Subtitle.vue'
-import Paragraph from '~/components/Typography/Paragraph.vue'
-import ButtonReadMore from '~/components/ButtonReadMore.vue'
+import ButtonBase from '~/components/ButtonBase.vue'
 
 export default {
   components: {
-    Subtitle,
-    Paragraph,
-    ButtonReadMore,
+    ButtonBase,
   },
   props: {
     blog: {
