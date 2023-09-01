@@ -1,11 +1,11 @@
 <template>
   <div class="font-monserrat text-slate max-w-3xl mx-auto">
-    <div v-show="!isLoading">
+    <loader-hamster v-show="isLoading" />
+    <div>
       <header-main />
       <Nuxt />
       <footer-main />
     </div>
-    <loader-hamster v-show="isLoading" />
   </div>
 </template>
 
